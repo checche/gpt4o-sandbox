@@ -1,14 +1,3 @@
-from typing import Any, Callable, Set
-
-from pydantic import (
-    AliasChoices,
-    AmqpDsn,
-    BaseModel,
-    Field,
-    ImportString,
-    PostgresDsn,
-    RedisDsn,
-)
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
