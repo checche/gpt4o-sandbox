@@ -33,18 +33,6 @@ completion = client.chat.completions.create(
         },
         {"role": "user", "content": "もっとアカデミックなダジャレを作ってください。"},
     ],
-    # extra_body={
-    #     "data_sources": [
-    #         {
-    #             "type": "azure_search",
-    #             "parameters": {
-    #                 "endpoint": search_endpoint,
-    #                 "index_name": search_index,
-    #                 "authentication": {"type": "system_assigned_managed_identity"},
-    #             },
-    #         }
-    #     ]
-    # },
 )
 
 print(completion.to_json())
