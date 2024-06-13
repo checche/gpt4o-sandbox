@@ -60,8 +60,45 @@ message_db: Iterable[ChatCompletionMessageParam] = [
     },
 ]
 
+message_wara: Iterable[ChatCompletionMessageParam] = [
+    {"role": "system", "content": "あなたは大喜利が得意です"},
+    {
+        "role": "user",
+        "content": [
+            {
+                "type": "text",
+                "text": "大喜利です。画像で一言お願いします。",
+            },
+            {
+                "type": "image_url",
+                "image_url": {
+                    "url": "https://www.min-breeder.com/data/magazine/16384/main_16384_75588_detail.jpg",
+                },
+            },
+        ],
+    },
+]
 
-response = client.chat.completions.create(model=deployment, messages=message_db)
+message_meishi: Iterable[ChatCompletionMessageParam] = [
+    {"role": "system", "content": "名刺の情報を整理するシステムです。"},
+    {
+        "role": "user",
+        "content": [
+            {
+                "type": "text",
+                "text": "名刺の内容を整理してください。",
+            },
+            {
+                "type": "image_url",
+                "image_url": {
+                    "url": "https://www.graphic.jp/smapri_design/preview_template/12050121010184421415048314103018245",
+                },
+            },
+        ],
+    },
+]
+
+response = client.chat.completions.create(model=deployment, messages=message_meishi)
 
 print(response.to_json())
 print(response.choices[0].message.content)
