@@ -5,8 +5,6 @@ from gpt4o_sandbox.config import settings
 
 endpoint = settings.azure_openai_endpoint
 deployment = settings.chat_completions_deployment_name
-search_endpoint = settings.search_endpoint
-search_index = settings.search_index
 api_key = settings.api_key
 
 token_provider = get_bearer_token_provider(

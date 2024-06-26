@@ -6,8 +6,6 @@ class Settings(BaseSettings):
 
     azure_openai_endpoint: str
     chat_completions_deployment_name: str
-    search_endpoint: str
-    search_index: str
     api_key: str
 
 
